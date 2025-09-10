@@ -1,6 +1,13 @@
 return {
     { "folke/snacks.nvim", opts = { dashboard = { enabled = false } } },
     {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function()
+            vim.cmd("colorscheme rose-pine")
+        end,
+    },
+    {
         "goolord/alpha-nvim",
         event = "VimEnter",
         enabled = true,
