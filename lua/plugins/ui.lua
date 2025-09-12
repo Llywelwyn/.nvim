@@ -86,7 +86,7 @@ return {
       }
       for _, button in ipairs(dashboard.section.buttons.val) do
         button.opts.hl = "AlphaButtons"
-        button.opts.width = 15
+        button.opts.width = 14
         button.opts.hl_shortcut = "AlphaShortcut"
       end
       dashboard.section.buttons.opts.spacing = 1
