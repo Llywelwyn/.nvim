@@ -9,7 +9,7 @@ return {
         compile = false, -- after modifying, restart nvim and :KanagawaCompile
         undercurl = true, -- enable undercurls
         commentStyle = { italic = true },
-        functionStyle = {},
+        functionStyle = { bold = true },
         keywordStyle = { bold = true, italic = false },
         statementStyle = { bold = true },
         typeStyle = { bold = true },
@@ -62,6 +62,7 @@ return {
             ["@lsp.type.field"] = { fg = colors.palette.carpYellow, bold = true },
             ["@lsp.type.property"] = { fg = colors.palette.carpYellow, bold = true },
             ["@lsp.type.parameter"] = { fg = colors.palette.carpYellow, bold = true },
+            ["@lsp.type.extensionMethod"] = { fg = colors.palette.springBlue, bold = true },
           }
         end,
         theme = "wave", -- Load "wave" theme
