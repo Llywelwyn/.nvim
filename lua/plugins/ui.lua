@@ -77,20 +77,19 @@ return {
     init = false,
     opts = function()
       local dashboard = require("alpha.themes.dashboard")
-      local logo = [[neovim]]
+      local logo = [[nvim]]
 
       dashboard.section.header.val = vim.split(logo, "\n")
-    -- stylua: ignore
-    dashboard.section.buttons.val = {
-      dashboard.button("n", "new",        [[<cmd> ene <BAR> startinsert <cr>]]),
-      dashboard.button("r", "recent",    [[<cmd> lua LazyVim.pick("oldfiles")() <cr>]]),
-      dashboard.button("s", "prev session", [[<cmd> lua require("persistence").load() <cr>]]),
-    }
+      dashboard.section.buttons.val = {
+        dashboard.button("r", "recent", [[<cmd> lua LazyVim.pick("oldfiles")() <cr>]]),
+        dashboard.button("s", "session", [[<cmd> lua require("persistence").load() <cr>]]),
+      }
       for _, button in ipairs(dashboard.section.buttons.val) do
         button.opts.hl = "AlphaButtons"
-        button.opts.width = 25
+        button.opts.width = 15
         button.opts.hl_shortcut = "AlphaShortcut"
       end
+      dashboard.section.buttons.opts.spacing = 1
       dashboard.section.header.opts.hl = "AlphaHeader"
       dashboard.section.buttons.opts.hl = "AlphaButtons"
       dashboard.section.footer.opts.hl = "AlphaFooter"
@@ -118,8 +117,8 @@ return {
         pattern = "LazyVimStarted",
         callback = function()
           local stats = require("lazy").stats()
-          local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-          dashboard.section.header.val = "nvim in " .. ms .. "ms"
+          local ms = (math.floor(stats.startuptime * 100) / 100)
+          dashboard.section.header.val = "nvim in " .. ms .. "s"
           pcall(vim.cmd.AlphaRedraw)
         end,
       })
