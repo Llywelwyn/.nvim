@@ -35,6 +35,7 @@ return {
             surimiOrange = "#00CECE",   -- constants, imports, booleans
             springBlue   = "#A60000",   -- specials and builtin functions
             peachRed     = "#FFFF00",   -- specials 2: exception handling, return
+            waveBlue1    = "#FFFFFF",   -- visual selection
           },
           theme = {
             all = {
