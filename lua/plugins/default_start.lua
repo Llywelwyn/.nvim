@@ -10,7 +10,6 @@ local function override_event()
 end
 
 return {
-  { "folke/snacks.nvim", opts = { dashboard = { enabled = false } } },
   {
     "LazyVim/LazyVim",
     init = function()
