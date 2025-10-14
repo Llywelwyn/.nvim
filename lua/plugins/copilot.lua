@@ -9,12 +9,13 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", desc = "toggle chat" },
-      { "<leader>aa", "<cmd>CodeCompanionActions<cr>", desc = "actions" },
-      { mode = { "v" }, "<leader>ap", "<cmd>CodeCompanionChat Add<cr>", desc = "put in chat" },
+      { "<C-c>", "<cmd>CodeCompanionChat Toggle<cr>", desc = "toggle chat" },
+      { "<C-x>", "<cmd>CodeCompanionActions<cr>", desc = "actions picker" },
+      { mode = { "v" }, "<C-y>", "<cmd>CodeCompanionChat Add<cr>", desc = "put in chat" },
     },
     opts = {
       -- https://codecompanion.olimorris.dev/extending/prompts
+      prompt_library = {},
       display = {
         action_palette = {
           width = 95,
