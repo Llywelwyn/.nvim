@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 TARGET="$HOME/.config/nvim"
 SOURCE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -17,4 +18,5 @@ mkdir -p "$(dirname "$TARGET")"
 
 ln -s "$SOURCE" "$TARGET"
 echo "symlink made $TARGET -> $SOURCE"
+ln -s $HOME/.config/omarchy/current/theme/neovim.lua $HOME/.config/nvim/lua/plugins/theme.lua
 
