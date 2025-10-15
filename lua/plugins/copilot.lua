@@ -10,7 +10,7 @@ return {
     },
     keys = {
       { "<C-c>", "<cmd>CodeCompanionChat Toggle<cr>", desc = "toggle chat" },
-      { "<C-x>", "<cmd>CodeCompanionActions<cr>", desc = "actions picker" },
+      { "<leader>a", "<cmd>CodeCompanionActions<cr>", desc = "actions picker" },
       { mode = { "v" }, "<C-y>", "<cmd>CodeCompanionChat Add<cr>", desc = "put in chat" },
     },
     opts = {
